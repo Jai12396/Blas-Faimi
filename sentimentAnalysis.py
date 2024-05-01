@@ -3,6 +3,7 @@ import os
 import numpy as np
 
 
+# Custom class
 class CustomModelPrediction(object):
 
     def __init__(self, model, processor):
