@@ -1,7 +1,7 @@
 import pickle
 import os
 import numpy as np
-
+import tensorflow.keras as keras
 
 class CustomModelPrediction(object):
 
@@ -16,7 +16,6 @@ class CustomModelPrediction(object):
 
     @classmethod
     def from_path(cls, model_dir, filename, processor_state):
-        import tensorflow.keras as keras
         model = keras.models.load_model(
             os.path.join(model_dir, filename))
         with open(os.path.join(model_dir, processor_state), 'rb') as f:
